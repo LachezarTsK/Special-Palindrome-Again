@@ -36,8 +36,7 @@ public class Solution {
 			total += calculate_allSubstringsInSubstringOfSameChar(lengthOfSubtrings[i]);
 			if (charOfSubstrings[i - 2] == charOfSubstrings[i]) {
 				if (lengthOfSubtrings[i - 1] == 1) {
-					total += lengthOfSubtrings[i - 2] < lengthOfSubtrings[i] ? lengthOfSubtrings[i - 2]
-							: lengthOfSubtrings[i];
+					total += Math.min(lengthOfSubtrings[i - 2], lengthOfSubtrings[i]);
 				}
 			}
 		}
